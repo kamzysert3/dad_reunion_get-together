@@ -114,7 +114,7 @@ export default function BookingForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
+    <div className="w-full max-w-2xl mx-auto p-4 sm:p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
       {toast && <Toast message={toast} onClose={() => setToast(null)} success={toastSuccess} />}
       <ConfirmDialog
         open={showDialog}
@@ -124,7 +124,7 @@ export default function BookingForm() {
         onCancel={handleDialogCancel}
         submitting={submitStatus}
       />
-      <form className="space-y-6"
+      <form className="space-y-5 sm:space-y-6"
         onSubmit={handleSubmit}
       >
         {/* Name */}
@@ -170,7 +170,7 @@ export default function BookingForm() {
         {/* Attendance */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">Attendance</label>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-2 sm:space-y-0">
             <label className="flex items-center space-x-2">
               <input type="radio" id="will-attend" name="attendance" value="will-attend" required 
               onChange={(e) => setAttendance('Will Attend')}
@@ -204,7 +204,7 @@ export default function BookingForm() {
         {/* Accommodation */}
         <div>
           <label htmlFor="accommodation" className="block text-sm font-medium text-gray-700 mb-1">Accommodation</label>
-          <div className="flex items-center space-x-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-2 sm:space-y-0">
             <label className="flex items-center space-x-2">
               <input type="radio" id="yes-accommodation" name="accommodation" value="yes-accommodation" required 
               onChange={(e) => setAccommodation('Yes')}
@@ -229,7 +229,7 @@ export default function BookingForm() {
         {/* Logistics */}
         <div>
           <label htmlFor="accommodation" className="block text-sm font-medium text-gray-700 mb-1">Logistics</label>
-          <div className="flex items-center space-x-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-2 sm:space-y-0">
             <label className="flex items-center space-x-2">
               <input type="radio" id="yes-logistics" name="logistics" value="yes-logistics" required 
               onChange={(e) => setLogistics('Yes')}
@@ -252,9 +252,9 @@ export default function BookingForm() {
         </div>
 
         {/* Financial Support */}
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <label className="block text-sm font-medium text-gray-700 mb-2">Financial Support</label>
-          <div className="flex items-center space-x-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-2 sm:space-y-0">
             <label className="flex items-center space-x-2">
               <input type="radio" id="cash" name="financial-support" value="cash" required
               onChange={(e) => setFinancialSupport('Cash')}
@@ -277,7 +277,7 @@ export default function BookingForm() {
               <span className="text-sm text-gray-700">None</span>
             </label>
           </div>
-          <input type="text" name="pledge-amount" placeholder="₦0" className="w-full px-3 py-3 border border-gray-300 rounded-md" 
+          <input type="text" name="pledge-amount" placeholder="₦0" inputMode="numeric" className="w-full px-3 py-3 border border-gray-300 rounded-md" 
             disabled={financialSupport == 'None' || !financialSupport}
             value={financialSupportAmount}
             onChange={handleChange}
@@ -309,7 +309,7 @@ export default function BookingForm() {
 
         <button
           type="submit"
-          className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-sm"
+          className="w-full px-4 sm:px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-sm text-base sm:text-lg"
         >
           Submit
         </button>

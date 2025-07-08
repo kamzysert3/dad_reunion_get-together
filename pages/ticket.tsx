@@ -22,9 +22,9 @@ const TicketPage = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-12 p-10 bg-white/90 rounded-2xl shadow-2xl border border-blue-200">
-      <h1 className="text-3xl font-bold text-center mb-8 text-blue-800 drop-shadow">Your CAS-FORUM (85/87 set) Reunion Ticket</h1>
-      <div className="space-y-4 text-gray-800 text-lg">
+    <div className="w-full max-w-lg mx-auto mt-8 sm:mt-12 p-4 sm:p-8 md:p-10 bg-white/90 rounded-2xl shadow-2xl border border-blue-200">
+      <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-blue-800 drop-shadow">Your CAS-FORUM (85/87 set) Reunion Ticket</h1>
+      <div className="space-y-3 sm:space-y-4 text-gray-800 text-base sm:text-lg">
         <div><span className="font-semibold">Name:</span> {ticket.name}</div>
         <div><span className="font-semibold">State Chapter:</span> {ticket.stateChapter}</div>
         <div><span className="font-semibold">Attendance:</span> {ticket.attendance}</div>
@@ -39,7 +39,7 @@ const TicketPage = () => {
       </div>
       <button
         onClick={handleDownload}
-        className="w-full mt-8 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-sm"
+        className="w-full mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-sm"
       >
         Download Ticket
       </button>
