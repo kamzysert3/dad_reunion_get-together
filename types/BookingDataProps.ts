@@ -1,5 +1,5 @@
 export interface BookingDataProps {
-    _id?: string; // Optional for new bookings
+    _id?: string;
     name: string;
     stateChapter: string;
     attendance: string;

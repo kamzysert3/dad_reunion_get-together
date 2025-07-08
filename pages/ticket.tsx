@@ -22,9 +22,9 @@ const TicketPage = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-12 p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
-      <h1 className="text-2xl font-bold text-center mb-6 text-blue-700">Your Reunion Ticket</h1>
-      <div className="space-y-3 text-gray-800">
+    <div className="max-w-lg mx-auto mt-12 p-10 bg-white/90 rounded-2xl shadow-2xl border border-blue-200">
+      <h1 className="text-3xl font-bold text-center mb-8 text-blue-800 drop-shadow">Your CAS-FORUM (85/87 set) Reunion Ticket</h1>
+      <div className="space-y-4 text-gray-800 text-lg">
         <div><span className="font-semibold">Name:</span> {ticket.name}</div>
         <div><span className="font-semibold">State Chapter:</span> {ticket.stateChapter}</div>
         <div><span className="font-semibold">Attendance:</span> {ticket.attendance}</div>
